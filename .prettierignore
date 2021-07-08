@@ -1,0 +1,16 @@
+# Editor
+.idea/
+
+# dependencies
+/node_modules
+/.pnp
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
