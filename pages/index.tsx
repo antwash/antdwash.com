@@ -1,5 +1,7 @@
 import Head from "next/head"
 
+import { Layout } from "@components"
+
 export default function Home() {
   return (
     <>
@@ -31,7 +33,7 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#191923" />
       </Head>
-      <main>Welcome to Anthony&apos;s personal website!</main>
+      <Layout />
     </>
   )
 }
