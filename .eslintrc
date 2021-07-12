@@ -1,7 +1,12 @@
 {
   "extends": ["next", "next/core-web-vitals"],
   "rules": {
-    "sort-imports": "warn",
+    "sort-imports": [
+      "warn",
+      {
+        "memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
+      }
+    ],
     "array-callback-return": "error",
     "eqeqeq": "error"
   }
