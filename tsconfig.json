@@ -4,7 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": ".",
     "paths": {
-      "@components": ["components/index.ts"]
+      "@components/*": ["components/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
