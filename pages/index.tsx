@@ -2,6 +2,17 @@ import Head from "next/head"
 
 import Layout from "@components/layout"
 
+import { ThemeProvider } from "react-jss"
+
+const theme: Jss.Theme = {
+  palette: {
+    primary: "#191923",
+    secondary: "#C81D25",
+    grey: "#A0A0A0",
+    white: "#FBFEF9",
+  },
+}
+
 export default function Home() {
   return (
     <>
@@ -33,7 +44,9 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#191923" />
       </Head>
-      <Layout />
+      <ThemeProvider theme={theme}>
+        <Layout />
+      </ThemeProvider>
     </>
   )
 }

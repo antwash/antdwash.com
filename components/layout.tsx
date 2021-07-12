@@ -4,9 +4,9 @@ import { createUseStyles } from "react-jss"
 
 import { SocialMediaBar } from "@components/socialMediaBar"
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles((theme) => ({
   container: {
-    backgroundColor: "#191923",
+    backgroundColor: theme.palette.primary,
     minHeight: "100vh",
     display: "grid",
     gridTemplateColumns: "0.1fr 1fr",
@@ -42,7 +42,7 @@ const useStyles = createUseStyles({
       `,
     },
   },
-})
+}))
 
 const Layout = () => {
   const classes = useStyles()
