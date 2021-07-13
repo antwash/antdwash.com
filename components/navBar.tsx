@@ -15,13 +15,20 @@ export const NavBar = (props: NavBarProps) => {
     container: {
       display: "flex",
       alignItems: "center",
+      justifyContent: "space-between",
       padding: theme.spacing.lg,
       height: theme.component.nav.height,
     },
     logo: {
       display: "inline-block",
-      height: "60px",
-      width: "60px",
+      height: "65px",
+      width: "65px",
+    },
+    resumeBtn: {
+      border: `2px solid ${theme.palette.secondary}`,
+      borderRadius: "4px",
+      padding: "0.75rem",
+      color: theme.palette.white,
     },
   }))()
 
@@ -33,6 +40,9 @@ export const NavBar = (props: NavBarProps) => {
           <Icon name="logo" />
         </a>
       </Link>
+      <a href="" className={classes.resumeBtn}>
+        Get Resume
+      </a>
     </div>
   )
 }
