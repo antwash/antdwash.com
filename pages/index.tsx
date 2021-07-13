@@ -11,6 +11,11 @@ const theme: Jss.Theme = {
     grey: "#A0A0A0",
     white: "#FBFEF9",
   },
+  spacing: {
+    sm: "8px",
+    md: "16px",
+    lg: "24px",
+  },
 }
 
 export default function Home() {

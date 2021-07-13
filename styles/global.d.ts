@@ -7,6 +7,11 @@ declare global {
         grey: string
         white: string
       }
+      spacing: {
+        sm: string
+        md: string
+        lg: string
+      }
     }
   }
 }
