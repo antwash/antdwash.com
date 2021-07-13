@@ -1,10 +1,8 @@
 import React from "react"
 
-import clsx from "clsx"
-
 import { createUseStyles } from "react-jss"
 
-import { Icon, IconType } from "@components/icons"
+import { Icon, IconType } from "@icons"
 
 interface SocialMedia {
   name: IconType
@@ -34,17 +32,16 @@ const socialMedias: SocialMedia[] = [
   },
 ]
 
-interface SocialMediaBarProps {
-  className?: string
-}
-
-export const SocialMediaBar = (props: SocialMediaBarProps) => {
-  const classes = createUseStyles({
+export const SocialMediaBar = () => {
+  const classes = createUseStyles((theme) => ({
     container: {
       display: "flex",
       flexDirection: "column",
       justifyContent: "flex-end",
       alignItems: "center",
+      width: theme.component.socialBar.width,
+      position: "fixed",
+      bottom: 0,
     },
     iconList: {
       display: "flex",
@@ -60,28 +57,20 @@ export const SocialMediaBar = (props: SocialMediaBarProps) => {
       },
     },
     line: {
-      backgroundColor: "#A0A0A0",
+      backgroundColor: theme.palette.grey,
       width: "1px",
       height: "100px",
     },
 
     "@media (max-width: 768px)": {
       container: {
-        justifyContent: "center",
-      },
-      iconList: {
-        flexDirection: "row",
-      },
-      line: {
         display: "none",
       },
     },
-  })()
-
-  const { className } = props
+  }))()
 
   return (
-    <div className={clsx(className, classes.container)}>
+    <div className={classes.container}>
       <div className={classes.iconList}>
         {socialMedias.map((socialMedia) => {
           const { name, url } = socialMedia
