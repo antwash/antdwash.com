@@ -12,6 +12,14 @@ declare global {
         md: string
         lg: string
       }
+      component: {
+        nav: {
+          height: string
+        }
+        socialBar: {
+          width: string
+        }
+      }
     }
   }
 }

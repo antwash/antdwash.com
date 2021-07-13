@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-import Layout from "@components/layout"
+import { Layout } from "@components"
 
 import { ThemeProvider } from "react-jss"
 
@@ -15,6 +15,10 @@ const theme: Jss.Theme = {
     sm: "8px",
     md: "16px",
     lg: "24px",
+  },
+  component: {
+    nav: { height: "100px" },
+    socialBar: { width: "75px" },
   },
 }
 
