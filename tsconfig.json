@@ -4,7 +4,8 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["components/*"]
+      "@components": ["components/index.ts"],
+      "@icons": ["components/icons/index.ts"]
     },
     "allowJs": true,
     "skipLibCheck": true,
