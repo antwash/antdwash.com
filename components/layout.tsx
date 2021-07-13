@@ -2,6 +2,7 @@ import React from "react"
 
 import { createUseStyles } from "react-jss"
 
+import { NavBar } from "@components/navBar"
 import { SocialMediaBar } from "@components/socialMediaBar"
 
 const useStyles = createUseStyles((theme) => ({
@@ -9,18 +10,15 @@ const useStyles = createUseStyles((theme) => ({
     backgroundColor: theme.palette.primary,
     minHeight: "100vh",
     display: "grid",
-    gridTemplateColumns: "0.1fr 1fr",
-    gridTemplateRows: "0.1fr 1fr 0.1fr",
+    gridTemplateColumns: "100px 1fr",
+    gridTemplateRows: "100px 1fr 0.1fr",
     gridTemplateAreas: `
       'nav nav'
       'socialMedia content'
       'socialMedia footer'
     `,
   },
-  nav: {
-    backgroundColor: "purple",
-    gridArea: "nav",
-  },
+  nav: { gridArea: "nav" },
   socialMedia: { gridArea: "socialMedia" },
   content: {
     backgroundColor: "red",
@@ -49,7 +47,7 @@ const Layout = () => {
 
   return (
     <div className={classes.container}>
-      <nav className={classes.nav}>NavBar</nav>
+      <NavBar className={classes.nav} />
       <SocialMediaBar className={classes.socialMedia} />
       <main className={classes.content}>
         <span>Welcome to Anthony&apos;s personal website!</span>
