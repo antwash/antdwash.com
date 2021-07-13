@@ -2,58 +2,42 @@ import React from "react"
 
 import { createUseStyles } from "react-jss"
 
-import { NavBar } from "@components/navBar"
-import { SocialMediaBar } from "@components/socialMediaBar"
+import { NavBar, SocialMediaBar } from "@components"
 
 const useStyles = createUseStyles((theme) => ({
   container: {
     backgroundColor: theme.palette.primary,
+    display: "flex",
+    flexDirection: "column",
     minHeight: "100vh",
-    display: "grid",
-    gridTemplateColumns: "100px 1fr",
-    gridTemplateRows: "100px 1fr 0.1fr",
-    gridTemplateAreas: `
-      'nav nav'
-      'socialMedia content'
-      'socialMedia footer'
-    `,
   },
-  nav: { gridArea: "nav" },
-  socialMedia: { gridArea: "socialMedia" },
+  main: { display: "flex", flex: 1 },
   content: {
-    backgroundColor: "red",
-    gridArea: "content",
+    backgroundColor: "pink",
+    flex: 1,
+    marginLeft: theme.component.socialBar.width,
   },
-  footer: {
-    backgroundColor: "lightgreen",
-    gridArea: "footer",
-  },
+  footer: { backgroundColor: "lightgreen" },
   "@media (max-width: 768px)": {
-    container: {
-      gridTemplateColumns: "1fr",
-      gridTemplateRows: "0.1fr 1fr 0.1fr 0.1fr",
-      gridTemplateAreas: `
-        'nav'
-        'content'
-        'socialMedia'
-        'footer'
-      `,
+    content: {
+      marginLeft: 0,
     },
   },
 }))
 
-const Layout = () => {
+export const Layout = () => {
   const classes = useStyles()
 
   return (
     <div className={classes.container}>
-      <NavBar className={classes.nav} />
-      <SocialMediaBar className={classes.socialMedia} />
-      <main className={classes.content}>
-        <span>Welcome to Anthony&apos;s personal website!</span>
+      <NavBar />
+      <main className={classes.main}>
+        <SocialMediaBar />
+        <div className={classes.content}>
+          <span>Welcome to Anthony&apos;s personal website!</span>
+          <footer className={classes.footer}>Footer of the page</footer>
+        </div>
       </main>
-      <footer className={classes.footer}>Footer of the page</footer>
     </div>
   )
 }
-export default Layout
