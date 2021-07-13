@@ -4,7 +4,7 @@ import { createUseStyles } from "react-jss"
 
 import Link from "next/link"
 
-import { Icon } from "@components/icons"
+import { Icon } from "@icons"
 
 interface NavBarProps {
   className?: string
@@ -15,8 +15,8 @@ export const NavBar = (props: NavBarProps) => {
     container: {
       display: "flex",
       alignItems: "center",
-      justifyContent: "space-between",
       padding: theme.spacing.lg,
+      height: theme.component.nav.height,
     },
     logo: {
       display: "inline-block",
