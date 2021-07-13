@@ -2,6 +2,7 @@ import {
   Github,
   Instagram,
   Linkedin,
+  Logo,
   Twitter,
   Youtube,
 } from "@components/icons"
@@ -12,6 +13,7 @@ export type IconType =
   | "linkedin"
   | "twitter"
   | "youtube"
+  | "logo"
 
 interface IconProps {
   name: IconType
@@ -31,5 +33,7 @@ export const Icon = (props: IconProps) => {
       return <Twitter />
     case "youtube":
       return <Youtube />
+    case "logo":
+      return <Logo />
   }
 }
