@@ -32,24 +32,15 @@ const socialMedias: SocialMedia[] = [
   },
 ]
 
-export const SocialMediaBar = () => {
+const SocialMediaList = () => {
   const classes = createUseStyles((theme) => ({
-    container: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "flex-end",
-      alignItems: "center",
-      width: theme.component.socialBar.width,
-      position: "fixed",
-      bottom: 0,
-    },
     iconList: {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       "& a": {
         cursor: "nesw-resize",
-        padding: "15px",
+        padding: theme.spacing.md,
         "& svg": {
           height: "20px",
           width: "20px",
@@ -63,25 +54,71 @@ export const SocialMediaBar = () => {
     },
 
     "@media (max-width: 768px)": {
-      container: {
+      iconList: {
+        flexDirection: "row",
+      },
+      line: {
         display: "none",
       },
     },
   }))()
 
   return (
+    <div className={classes.iconList}>
+      {socialMedias.map((socialMedia) => {
+        const { name, url } = socialMedia
+        return (
+          <a key={name} aria-label={name} href={url}>
+            <Icon name={name} />
+          </a>
+        )
+      })}
+      <div className={classes.line} />
+    </div>
+  )
+}
+
+export const VerticalSocialMediaBar = () => {
+  const classes = createUseStyles((theme) => ({
+    container: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "flex-end",
+      alignItems: "center",
+      width: theme.component.socialBar.width,
+      position: "fixed",
+      bottom: 0,
+    },
+    "@media (max-width: 768px)": {
+      container: {
+        display: "none",
+      },
+    },
+  }))()
+  return (
     <div className={classes.container}>
-      <div className={classes.iconList}>
-        {socialMedias.map((socialMedia) => {
-          const { name, url } = socialMedia
-          return (
-            <a key={name} aria-label={name} href={url}>
-              <Icon name={name} />
-            </a>
-          )
-        })}
-        <div className={classes.line} />
-      </div>
+      <SocialMediaList />
+    </div>
+  )
+}
+
+export const HorizontalSocialMediaBar = () => {
+  const classes = createUseStyles({
+    container: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    "@media (min-width: 769px)": {
+      container: {
+        display: "none",
+      },
+    },
+  })()
+
+  return (
+    <div className={classes.container}>
+      <SocialMediaList />
     </div>
   )
 }
