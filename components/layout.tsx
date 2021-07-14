@@ -2,7 +2,7 @@ import React from "react"
 
 import { createUseStyles } from "react-jss"
 
-import { NavBar, SocialMediaBar } from "@components"
+import { Footer, NavBar, VerticalSocialMediaBar } from "@components"
 
 const useStyles = createUseStyles((theme) => ({
   container: {
@@ -13,11 +13,10 @@ const useStyles = createUseStyles((theme) => ({
   },
   main: { display: "flex", flex: 1 },
   content: {
-    backgroundColor: "pink",
     flex: 1,
     marginLeft: theme.component.socialBar.width,
   },
-  footer: { backgroundColor: "lightgreen" },
+
   "@media (max-width: 768px)": {
     content: {
       marginLeft: 0,
@@ -32,10 +31,10 @@ export const Layout = () => {
     <div className={classes.container}>
       <NavBar />
       <main className={classes.main}>
-        <SocialMediaBar />
+        <VerticalSocialMediaBar />
         <div className={classes.content}>
           <span>Welcome to Anthony&apos;s personal website!</span>
-          <footer className={classes.footer}>Footer of the page</footer>
+          <Footer />
         </div>
       </main>
     </div>
