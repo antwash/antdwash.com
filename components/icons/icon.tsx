@@ -1,11 +1,4 @@
-import {
-  Github,
-  Instagram,
-  Linkedin,
-  Logo,
-  Twitter,
-  Youtube,
-} from "@components/icons"
+import { Github, Instagram, Linkedin, Logo, Twitter, Youtube } from "@icons"
 
 export type IconType =
   | "github"
