@@ -36,22 +36,44 @@ export default function Home() {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="/public/apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.png"
+          href="/public/favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/public/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#191923" />
+        <link rel="manifest" href="/public/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="/public/safari-pinned-tab.svg"
+          color="#191923"
+        />
+        <link
+          rel="preload"
+          as="font"
+          href="/public/fonts/BeVietnam/BeVietnam-Medium.ttf"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          as="font"
+          href="/public/fonts/BeVietnam/BeVietnam-Light.ttf"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          as="font"
+          href="/public/fonts/Roboto/Roboto-Light.ttf"
+          crossOrigin=""
+        />
       </Head>
       <ThemeProvider theme={theme}>
         <Layout />
