@@ -21,13 +21,12 @@ export const NavBar = (props: NavBarProps) => {
       height: theme.component.nav.height,
     },
     logo: {
-      display: "inline-block",
-      height: "65px",
-      width: "65px",
+      height: "7rem",
+      width: "7rem",
     },
     resumeBtn: {
-      border: `2px solid ${theme.palette.secondary}`,
-      borderRadius: "4px",
+      border: `.2rem solid ${theme.palette.secondary}`,
+      borderRadius: ".4rem",
       padding: "1.5rem",
       color: theme.palette.primary,
     },
