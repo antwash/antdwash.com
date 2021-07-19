@@ -12,13 +12,13 @@ const theme: Jss.Theme = {
     grey: "#A0A0A0",
   },
   spacing: {
-    sm: "8px",
-    md: "16px",
-    lg: "24px",
+    sm: ".8rem",
+    md: "1.6rem",
+    lg: "2.4rem",
   },
   component: {
-    nav: { height: "100px" },
-    socialBar: { width: "75px" },
+    nav: { height: "10rem" },
+    socialBar: { width: "7.5rem" },
   },
 }
 
