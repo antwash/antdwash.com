@@ -1,6 +1,6 @@
 import { createUseStyles } from "react-jss"
 
-import { HorizontalSocialMediaBar } from "@components"
+import { HorizontalSocialMediaBar, Text } from "@components"
 
 export const Footer = () => {
   const classes = createUseStyles((theme) => ({
@@ -24,8 +24,12 @@ export const Footer = () => {
     <div className={classes.container}>
       <HorizontalSocialMediaBar />
       <div className={classes.message}>
-        <span>Designed & Built by Anthony with ♥️</span>
-        <span>Copyright @1994 - {year}. All rights reserved.️</span>
+        <Text color="grey" variant="p">
+          Designed & Built by Anthony with ♥️
+        </Text>
+        <Text color="grey" variant="p">
+          Copyright @1994 - {year}. All rights reserved.️
+        </Text>
       </div>
     </div>
   )

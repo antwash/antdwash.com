@@ -4,6 +4,7 @@ import { createUseStyles } from "react-jss"
 
 import Link from "next/link"
 
+import { Text } from "@components"
 import { Icon } from "@icons"
 
 interface NavBarProps {
@@ -27,8 +28,8 @@ export const NavBar = (props: NavBarProps) => {
     resumeBtn: {
       border: `2px solid ${theme.palette.secondary}`,
       borderRadius: "4px",
-      padding: "0.75rem",
-      color: theme.palette.white,
+      padding: "1.5rem",
+      color: theme.palette.primary,
     },
   }))()
 
@@ -41,7 +42,7 @@ export const NavBar = (props: NavBarProps) => {
         </a>
       </Link>
       <a href="" className={classes.resumeBtn}>
-        Get Resume
+        <Text variant="caption">Get Resume</Text>
       </a>
     </div>
   )

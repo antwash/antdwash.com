@@ -2,11 +2,11 @@ import React from "react"
 
 import { createUseStyles } from "react-jss"
 
-import { Footer, NavBar, VerticalSocialMediaBar } from "@components"
+import { Footer, NavBar, Text, VerticalSocialMediaBar } from "@components"
 
 const useStyles = createUseStyles((theme) => ({
   container: {
-    backgroundColor: theme.palette.primary,
+    backgroundColor: theme.palette.background,
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
@@ -33,7 +33,7 @@ export const Layout = () => {
       <main className={classes.main}>
         <VerticalSocialMediaBar />
         <div className={classes.content}>
-          <span>Welcome to Anthony&apos;s personal website!</span>
+          <Text variant="p">Welcome to Anthony&apos;s personal website!</Text>
           <Footer />
         </div>
       </main>
