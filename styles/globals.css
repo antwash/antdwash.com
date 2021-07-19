@@ -1,6 +1,6 @@
 @font-face {
   font-family: "BeVietnam";
-  src: url("/public/fonts/BeVietnam/BeVietnam-Medium.ttf");
+  src: local("/public/fonts/BeVietnam/BeVietnam-Medium.ttf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -8,12 +8,16 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("/public/fonts/Roboto/Roboto-Light.ttf");
+  src: local("/public/fonts/Roboto/Roboto-Light.ttf");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
+:root{
+  /*62.5% = 10px*/
+  font-size: 62.5%;
+}
 html,
 body {
   padding: 0;
