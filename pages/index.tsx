@@ -6,10 +6,10 @@ import { ThemeProvider } from "react-jss"
 
 const theme: Jss.Theme = {
   palette: {
-    primary: "#191923",
+    background: "#191923",
+    primary: "#FBFEF9",
     secondary: "#C81D25",
     grey: "#A0A0A0",
-    white: "#FBFEF9",
   },
   spacing: {
     sm: "8px",
@@ -60,12 +60,6 @@ export default function Home() {
           rel="preload"
           as="font"
           href="/public/fonts/BeVietnam/BeVietnam-Medium.ttf"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          as="font"
-          href="/public/fonts/BeVietnam/BeVietnam-Light.ttf"
           crossOrigin=""
         />
         <link

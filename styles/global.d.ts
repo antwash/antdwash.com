@@ -2,10 +2,10 @@ declare global {
   namespace Jss {
     export interface Theme {
       palette: {
+        background: string
         primary: string
         secondary: string
         grey: string
-        white: string
       }
       spacing: {
         sm: string
