@@ -1,6 +1,7 @@
 import { Footer } from "./footer"
 import { Layout } from "./layout"
 import { NavBar } from "./navBar"
+import { Text } from "./text"
 import {
   HorizontalSocialMediaBar,
   VerticalSocialMediaBar,
@@ -11,5 +12,6 @@ export {
   Layout,
   NavBar,
   HorizontalSocialMediaBar,
+  Text,
   VerticalSocialMediaBar,
 }
