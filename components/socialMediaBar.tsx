@@ -42,15 +42,15 @@ const SocialMediaList = () => {
         cursor: "nesw-resize",
         padding: theme.spacing.md,
         "& svg": {
-          height: "20px",
-          width: "20px",
+          height: "2rem",
+          width: "2rem",
         },
       },
     },
     line: {
-      backgroundColor: theme.palette.grey,
-      width: "1px",
-      height: "100px",
+      backgroundColor: theme.palette.primary,
+      width: "0.2rem",
+      height: "10rem",
     },
 
     "@media (max-width: 768px)": {
