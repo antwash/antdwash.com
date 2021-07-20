@@ -23,10 +23,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: BeVietnam, Roboto, sans-serif;
+  background-color: #191923;
 }
 
 a {
-  color: inherit;
+  color: #C81D25;
   text-decoration: none;
 }
 
