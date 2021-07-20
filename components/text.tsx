@@ -32,7 +32,6 @@ export const Text = ({
 
   const classes = createUseStyles((theme) => ({
     root: {
-      margin: 0,
       letterSpacing: ".3rem",
     },
     beVietnam: {
@@ -76,16 +75,16 @@ export const Text = ({
   }))()
 
   return (
-    <p
+    <div
       className={clsx(
+        className,
         classes.root,
         classes[family],
         classes[variant],
-        classes[color],
-        className
+        classes[color]
       )}
     >
       {children}
-    </p>
+    </div>
   )
 }
