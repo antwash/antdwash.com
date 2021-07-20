@@ -11,6 +11,7 @@ declare global {
         sm: string
         md: string
         lg: string
+        xl: string
       }
       component: {
         nav: {

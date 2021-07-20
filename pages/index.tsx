@@ -14,7 +14,8 @@ const theme: Jss.Theme = {
   spacing: {
     sm: ".8rem",
     md: "1.6rem",
-    lg: "2.4rem",
+    lg: "3.2rem",
+    xl: "6.4rem",
   },
   component: {
     nav: { height: "10rem" },
