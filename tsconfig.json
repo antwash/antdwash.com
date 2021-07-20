@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "paths": {
       "@components": ["components/index.ts"],
-      "@icons": ["components/icons/index.ts"]
+      "@icons": ["components/icons/index.ts"],
+      "@sections":["components/sections/index.ts"]
     },
     "allowJs": true,
     "skipLibCheck": true,

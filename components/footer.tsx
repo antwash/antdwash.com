@@ -24,11 +24,11 @@ export const Footer = () => {
     <div className={classes.container}>
       <HorizontalSocialMediaBar />
       <div className={classes.message}>
-        <Text color="grey" variant="p">
+        <Text color="grey" variant="caption">
           Designed & Built by Anthony with ♥️
         </Text>
-        <Text color="grey" variant="p">
-          Copyright @1994 - {year}. All rights reserved.️
+        <Text color="grey" variant="caption">
+          Copyright @1994 - {year}. All rights reserved.
         </Text>
       </div>
     </div>
