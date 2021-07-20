@@ -13,18 +13,27 @@ interface TextProps {
   family?: FontFamily
   color?: FontColor
   children?: React.ReactNode
+  className?: string
 }
+
+const h1FontSize = "7.594rem"
+const h2FontSize = "5.063rem"
+const h3FontSize = "3.375rem"
+const h4FontSize = "2.25rem"
+const pFontSize = "1.5rem"
+const captionFontSize = "1rem"
 
 export const Text = ({
   family = "beVietnam",
   color = "primary",
   ...otherProps
 }: TextProps) => {
-  const { variant, children } = otherProps
+  const { variant, children, className } = otherProps
 
   const classes = createUseStyles((theme) => ({
     root: {
-      letterSpacing: ".2rem",
+      margin: 0,
+      letterSpacing: ".3rem",
     },
     beVietnam: {
       fontFamily: "Be Vietnam, sans-serif",
@@ -35,24 +44,25 @@ export const Text = ({
       fontWeight: 300,
     },
     h1: {
-      fontSize: "7.594rem",
+      fontSize: `clamp(${h3FontSize}, 5vw, ${h1FontSize})`,
     },
     h2: {
-      fontSize: "5.063rem",
+      fontSize: `clamp(${h4FontSize}, 5vw, ${h2FontSize})`,
     },
     h3: {
-      fontSize: "3.375rem",
+      fontSize: `clamp(${pFontSize}, 5vw, ${h3FontSize})`,
     },
     h4: {
-      fontSize: "2.25rem",
+      fontSize: `clamp(${pFontSize}, 5vw, ${h4FontSize})`,
     },
     p: {
-      fontSize: "1.5rem",
+      fontSize: `clamp(${captionFontSize}, 3vw, ${pFontSize})`,
+      lineHeight: "170%",
     },
     caption: {
-      fontSize: "1rem",
+      fontSize: captionFontSize,
       textTransform: "uppercase",
-      letterSpacing: ".5rem",
+      letterSpacing: ".4rem",
     },
     primary: {
       color: theme.palette.primary,
@@ -66,15 +76,16 @@ export const Text = ({
   }))()
 
   return (
-    <div
+    <p
       className={clsx(
         classes.root,
         classes[family],
         classes[variant],
-        classes[color]
+        classes[color],
+        className
       )}
     >
       {children}
-    </div>
+    </p>
   )
 }
