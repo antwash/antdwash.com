@@ -2,7 +2,8 @@ import React from "react"
 
 import { createUseStyles } from "react-jss"
 
-import { Footer, NavBar, Text, VerticalSocialMediaBar } from "@components"
+import { Footer, NavBar, VerticalSocialMediaBar } from "@components"
+import { Home } from "@sections"
 
 const useStyles = createUseStyles((theme) => ({
   container: {
@@ -14,6 +15,9 @@ const useStyles = createUseStyles((theme) => ({
   main: { display: "flex", flex: 1 },
   content: {
     flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
     marginLeft: theme.component.socialBar.width,
   },
 
@@ -33,7 +37,7 @@ export const Layout = () => {
       <main className={classes.main}>
         <VerticalSocialMediaBar />
         <div className={classes.content}>
-          <Text variant="p">Welcome to Anthony&apos;s personal website!</Text>
+          <Home />
           <Footer />
         </div>
       </main>
