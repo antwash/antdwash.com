@@ -16,6 +16,23 @@ export const Home = () => {
       maxWidth: "60rem",
       marginTop: theme.spacing.lg,
     },
+    actions: {
+      display: "flex",
+      flexWrap: "wrap",
+      marginTop: theme.spacing.lg,
+      "& > :first-child": {
+        marginRight: theme.spacing.lg,
+      },
+    },
+    button: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: `.2rem solid ${theme.palette.secondary}`,
+      borderRadius: ".4rem",
+      padding: "2.5rem",
+      color: theme.palette.primary,
+    },
   }))()
   return (
     <div className={classes.container}>
@@ -47,6 +64,14 @@ export const Home = () => {
         </a>
         .
       </Text>
+      <div className={classes.actions}>
+        <a href="" className={classes.button}>
+          <Text variant="caption">Email Me</Text>
+        </a>
+        <a href="" className={classes.button}>
+          <Text variant="caption">Get Resume</Text>
+        </a>
+      </div>
     </div>
   )
 }
