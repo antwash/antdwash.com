@@ -19,7 +19,7 @@ const theme: Jss.Theme = {
   },
   component: {
     nav: { height: "10rem" },
-    socialBar: { width: "7.5rem" },
+    socialBar: { width: "10rem" },
   },
 }
 

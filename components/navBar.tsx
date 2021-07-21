@@ -4,7 +4,6 @@ import { createUseStyles } from "react-jss"
 
 import Link from "next/link"
 
-import { Text } from "@components"
 import { Icon } from "@icons"
 
 interface NavBarProps {
@@ -16,19 +15,12 @@ export const NavBar = (props: NavBarProps) => {
     container: {
       display: "flex",
       alignItems: "center",
-      justifyContent: "space-between",
       padding: theme.spacing.lg,
       height: theme.component.nav.height,
     },
     logo: {
       height: "7rem",
       width: "7rem",
-    },
-    resumeBtn: {
-      border: `.2rem solid ${theme.palette.secondary}`,
-      borderRadius: ".4rem",
-      padding: "1.5rem",
-      color: theme.palette.primary,
     },
   }))()
 
@@ -40,9 +32,6 @@ export const NavBar = (props: NavBarProps) => {
           <Icon name="logo" />
         </a>
       </Link>
-      <a href="" className={classes.resumeBtn}>
-        <Text variant="caption">Get Resume</Text>
-      </a>
     </div>
   )
 }
