@@ -1,4 +1,5 @@
 import { Footer } from "./footer"
+import { Hyperlink } from "./hyperlink"
 import { Layout } from "./layout"
 import { NavBar } from "./navBar"
 import { Text } from "./text"
@@ -10,6 +11,7 @@ import {
 export {
   Footer,
   Layout,
+  Hyperlink,
   NavBar,
   HorizontalSocialMediaBar,
   Text,
