@@ -1,3 +1,5 @@
+import { About } from "./about"
 import { Home } from "./home"
+import { Section } from "./container"
 
-export { Home }
+export { About, Home, Section }
