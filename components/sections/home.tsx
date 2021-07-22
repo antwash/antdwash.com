@@ -1,14 +1,12 @@
 import React from "react"
 
-import { Text } from "@components"
 import { createUseStyles } from "react-jss"
+
+import { Section } from "@sections"
+import { Hyperlink, Text } from "@components"
 
 export const Home = () => {
   const classes = createUseStyles((theme) => ({
-    container: {
-      minHeight: "100vh",
-      padding: `${theme.spacing.xl}`,
-    },
     text: {
       marginBottom: theme.spacing.md,
     },
@@ -35,7 +33,7 @@ export const Home = () => {
     },
   }))()
   return (
-    <div className={classes.container}>
+    <Section>
       <Text
         variant="h4"
         color="secondary"
@@ -58,11 +56,8 @@ export const Home = () => {
       >
         I prioritize designing and building intuitive digital products with an
         emphasizes on UI/UX. Currently, I’m focused on building an IOT robot to
-        automate food preparation{" "}
-        <a href="" target="_blank" rel="noreferrer">
-          @Hyphen
-        </a>
-        .
+        automate food preparation
+        <Hyperlink url="" title=" @Hyphen" />.
       </Text>
       <div className={classes.actions}>
         <a href="" className={classes.button}>
@@ -72,6 +67,6 @@ export const Home = () => {
           <Text variant="caption">Get Resume</Text>
         </a>
       </div>
-    </div>
+    </Section>
   )
 }
