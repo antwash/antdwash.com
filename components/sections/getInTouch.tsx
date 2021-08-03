@@ -14,7 +14,6 @@ export const GetInTouch = () => {
       justifyContent: "center",
     },
     title: {
-      marginTop: theme.spacing.xl,
       marginBottom: theme.spacing.lg,
     },
     content1: {
