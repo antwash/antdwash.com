@@ -3,7 +3,7 @@ import React from "react"
 import { createUseStyles } from "react-jss"
 
 import { Footer, NavBar, VerticalSocialMediaBar } from "@components"
-import { About, Home } from "@sections"
+import { About, Home, GetInTouch } from "@sections"
 
 const useStyles = createUseStyles((theme) => ({
   container: {
@@ -40,6 +40,7 @@ export const Layout = () => {
         <div className={classes.content}>
           <Home />
           <About />
+          <GetInTouch />
           <Footer />
         </div>
       </main>
