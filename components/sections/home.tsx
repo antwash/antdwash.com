@@ -3,7 +3,7 @@ import React from "react"
 import { createUseStyles } from "react-jss"
 
 import { Section } from "@sections"
-import { Hyperlink, Text } from "@components"
+import { Hyperlink, Text, Button } from "@components"
 
 export const Home = () => {
   const classes = createUseStyles((theme) => ({
@@ -21,15 +21,6 @@ export const Home = () => {
       "& > :first-child": {
         marginRight: theme.spacing.lg,
       },
-    },
-    button: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: `.2rem solid ${theme.palette.secondary}`,
-      borderRadius: ".4rem",
-      padding: "2.5rem",
-      color: theme.palette.primary,
     },
   }))()
   return (
@@ -60,12 +51,8 @@ export const Home = () => {
         <Hyperlink url="" title=" @Hyphen" />.
       </Text>
       <div className={classes.actions}>
-        <a href="" className={classes.button}>
-          <Text variant="caption">Email Me</Text>
-        </a>
-        <a href="" className={classes.button}>
-          <Text variant="caption">Get Resume</Text>
-        </a>
+        <Button link="" label="Email Me" />
+        <Button link="" label="Get Resume" />
       </div>
     </Section>
   )
