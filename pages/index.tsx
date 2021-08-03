@@ -9,6 +9,7 @@ const theme: Jss.Theme = {
     background: "#191923",
     primary: "#FBFEF9",
     secondary: "#C81D25",
+    secondaryTint: "rgba(200, 29, 37, 0.1)",
     grey: "#A0A0A0",
   },
   spacing: {

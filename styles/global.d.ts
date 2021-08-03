@@ -5,6 +5,7 @@ declare global {
         background: string
         primary: string
         secondary: string
+        secondaryTint: string
         grey: string
       }
       spacing: {
