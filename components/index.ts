@@ -7,6 +7,7 @@ import {
   HorizontalSocialMediaBar,
   VerticalSocialMediaBar,
 } from "./socialMediaBar"
+import { Button } from "./button"
 
 export {
   Footer,
@@ -16,4 +17,5 @@ export {
   HorizontalSocialMediaBar,
   Text,
   VerticalSocialMediaBar,
+  Button,
 }
