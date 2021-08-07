@@ -7,11 +7,13 @@ import { createUseStyles } from "react-jss"
 type FontSize = "h1" | "h2" | "h3" | "h4" | "p" | "caption"
 type FontFamily = "beVietnam" | "roboto"
 type FontColor = "primary" | "secondary" | "grey"
+type FontAlignment = "center"
 
 interface TextProps {
   variant: FontSize
   family?: FontFamily
   color?: FontColor
+  align?: FontAlignment
   children?: React.ReactNode
   className?: string
 }
@@ -28,7 +30,7 @@ export const Text = ({
   color = "primary",
   ...otherProps
 }: TextProps) => {
-  const { variant, children, className } = otherProps
+  const { variant, children, align, className } = otherProps
 
   const classes = createUseStyles((theme) => ({
     root: {
@@ -72,6 +74,9 @@ export const Text = ({
     grey: {
       color: theme.palette.grey,
     },
+    center: {
+      textAlign: "center",
+    },
   }))()
 
   return (
@@ -81,7 +86,10 @@ export const Text = ({
         classes.root,
         classes[family],
         classes[variant],
-        classes[color]
+        classes[color],
+        {
+          [classes.center]: align === "center",
+        }
       )}
     >
       {children}
