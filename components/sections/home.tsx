@@ -18,9 +18,7 @@ export const Home = () => {
       display: "flex",
       flexWrap: "wrap",
       marginTop: theme.spacing.lg,
-      "& > :first-child": {
-        marginRight: theme.spacing.lg,
-      },
+      gap: theme.spacing.lg,
     },
   }))()
   return (

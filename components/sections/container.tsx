@@ -18,7 +18,7 @@ interface SectionProps {
 export const Section = (props: SectionProps) => {
   const classes = createUseStyles((theme) => ({
     container: {
-      minHeight: "100vh",
+      minHeight: "80vh",
       padding: `${theme.spacing.xl}`,
     },
     splitter: {
