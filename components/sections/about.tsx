@@ -1,9 +1,13 @@
 import React from "react"
 
+import Image from "next/image"
+
 import { createUseStyles } from "react-jss"
 
 import { Hyperlink, Text } from "@components"
 import { Section } from "@sections"
+
+import pictureOfMeCoding from "public/anthony_coding.jpg"
 
 interface InfoProps {
   info: React.ReactNode
@@ -36,6 +40,7 @@ export const About = () => {
     body: {
       display: "flex",
       flexWrap: "wrap",
+      gap: theme.spacing.lg,
     },
     info: {
       display: "flex",
@@ -43,8 +48,20 @@ export const About = () => {
       flex: 1,
       padding: theme.spacing.md,
     },
-    image: {
+    imageContainer: {
       flex: 1,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    image: {
+      borderRadius: theme.spacing.md,
+    },
+
+    "@media (max-width: 64rem)": {
+      body: {
+        flexDirection: "column",
+      },
     },
   }))()
 
@@ -103,8 +120,14 @@ export const About = () => {
             }
           />
         </div>
-        <div className={classes.image}>
-          <Text variant="caption">Image of me!</Text>
+        <div className={classes.imageContainer}>
+          <Image
+            src={pictureOfMeCoding}
+            alt="Picture of Anthony coding"
+            className={classes.image}
+            width={450}
+            height={300}
+          />
         </div>
       </div>
     </Section>
