@@ -27,16 +27,29 @@ export const Section = (props: SectionProps) => {
     header: {
       display: "flex",
       alignItems: "center",
-      "& > :first-child": {
-        marginRight: theme.spacing.xl,
-      },
       paddingLeft: theme.spacing.md,
+    },
+    sectionTitle: {
+      marginRight: theme.spacing.xl,
     },
     divider: {
       height: theme.spacing.sm,
       backgroundColor: theme.palette.primary,
       marginBottom: theme.spacing.xl,
       width: "100%",
+    },
+
+    "@media (max-width: 48rem)": {
+      splitter: {
+        marginBottom: theme.spacing.lg,
+      },
+      header: {
+        alignItems: "unset",
+        flexDirection: "column",
+      },
+      sectionTitle: {
+        marginBottom: theme.spacing.lg,
+      },
     },
   }))()
 
@@ -48,7 +61,11 @@ export const Section = (props: SectionProps) => {
         <div className={classes.splitter}>
           <div className={classes.divider} />
           <div className={classes.header}>
-            <Text variant="caption" color="secondary">
+            <Text
+              variant="caption"
+              color="secondary"
+              className={classes.sectionTitle}
+            >
               {showSplitter.caption}
             </Text>
             <Text variant="h3">{showSplitter.heading}</Text>
