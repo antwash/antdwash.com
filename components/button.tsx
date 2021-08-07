@@ -19,7 +19,7 @@ export const Button = (props: ButtonProps) => {
       border: `.2rem solid ${theme.palette.secondary}`,
       borderRadius: ".4rem",
       padding: "2.5rem",
-      minWidth: "20rem",
+      minWidth: "10rem",
       color: theme.palette.primary,
       "&:hover": {
         backgroundColor: theme.palette.secondaryTint,

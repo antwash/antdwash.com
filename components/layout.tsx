@@ -22,7 +22,7 @@ const useStyles = createUseStyles((theme) => ({
     paddingLeft: theme.spacing.xl,
   },
 
-  "@media (max-width: 768px)": {
+  "@media (max-width: 48rem)": {
     content: {
       marginLeft: 0,
     },

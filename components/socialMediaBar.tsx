@@ -53,7 +53,7 @@ const SocialMediaList = () => {
       height: "10rem",
     },
 
-    "@media (max-width: 768px)": {
+    "@media (max-width: 48rem)": {
       iconList: {
         flexDirection: "row",
       },
@@ -89,7 +89,7 @@ export const VerticalSocialMediaBar = () => {
       position: "fixed",
       bottom: 0,
     },
-    "@media (max-width: 768px)": {
+    "@media (max-width: 48rem)": {
       container: {
         display: "none",
       },
