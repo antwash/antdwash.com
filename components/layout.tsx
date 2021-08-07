@@ -18,13 +18,12 @@ const useStyles = createUseStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     marginLeft: theme.component.socialBar.width,
-    paddingRight: theme.spacing.xl,
-    paddingLeft: theme.spacing.xl,
   },
 
   "@media (max-width: 48rem)": {
     content: {
-      marginLeft: 0,
+      marginLeft: theme.spacing.lg,
+      marginRight: theme.spacing.lg,
     },
   },
 }))
