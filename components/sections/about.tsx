@@ -96,7 +96,7 @@ export const About = () => {
             info={
               <>
                 Currently, I am the 2nd Senior Software Engineer at
-                <Hyperlink url="" title=" Hyphen " />
+                <Hyperlink url="https://usehyphen.com/" title=" Hyphen " />
                 building intuitive user interfaces to autopilot food preparation
                 with robots.
               </>

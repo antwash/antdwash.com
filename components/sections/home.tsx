@@ -48,10 +48,10 @@ export const Home = () => {
         I prioritize designing and building intuitive digital products with an
         emphasizes on UI/UX. Currently, I’m focused on building an IOT robot to
         automate food preparation
-        <Hyperlink url="" title=" @Hyphen" />.
+        <Hyperlink url="https://usehyphen.com/" title=" @Hyphen" />.
       </Text>
       <div className={classes.actions}>
-        <Button link="" label="Email Me" />
+        <Button link="mailto:awashington251@gmail.com" label="Email Me" />
         <Button link="" label="Get Resume" />
       </div>
     </Section>
