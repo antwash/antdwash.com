@@ -61,9 +61,9 @@ const JobCard = (props: JobCardProps) => {
       display: "flex",
       justifyContent: "center",
       border: `.2rem solid ${theme.palette.secondary}`,
-      borderRadius: theme.spacing.md,
+      borderRadius: theme.spacing.sm,
       maxWidth: "30rem",
-      minHeight: "15rem",
+      minHeight: "20rem",
       padding: "3rem",
     },
     content: {
