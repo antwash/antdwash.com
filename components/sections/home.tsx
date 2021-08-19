@@ -11,7 +11,7 @@ export const Home = () => {
       marginBottom: theme.spacing.md,
     },
     mission: {
-      maxWidth: "60rem",
+      maxWidth: "65rem",
       marginTop: theme.spacing.lg,
     },
     actions: {
@@ -44,7 +44,7 @@ export const Home = () => {
         className={classes.mission}
       >
         I prioritize designing and building intuitive digital products with an
-        emphasizes on UI/UX. Currently, I’m focused on building an IOT robot to
+        emphasizes on UI/UX. Currently, I’m building IOT robotic makelines to
         automate food preparation
         <Hyperlink url="https://usehyphen.com/" title=" @Hyphen" />.
       </Text>
