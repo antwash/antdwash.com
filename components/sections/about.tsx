@@ -37,6 +37,7 @@ const Info = (props: InfoProps) => {
 
 export const About = () => {
   const classes = createUseStyles((theme) => ({
+    section: { maxWidth: "100rem" },
     body: {
       display: "flex",
       flexWrap: "wrap",
@@ -67,6 +68,7 @@ export const About = () => {
 
   return (
     <Section
+      className={classes.section}
       showSplitter={{
         caption: "About",
         heading: "How did I get started?",
