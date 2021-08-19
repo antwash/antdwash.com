@@ -17,8 +17,8 @@ export const Button = (props: ButtonProps) => {
       justifyContent: "center",
       alignItems: "center",
       border: `.2rem solid ${theme.palette.secondary}`,
-      borderRadius: ".4rem",
-      padding: "2.5rem",
+      borderRadius: ".5rem",
+      padding: "2rem",
       minWidth: "10rem",
       color: theme.palette.primary,
       "&:hover": {
