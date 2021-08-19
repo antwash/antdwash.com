@@ -62,7 +62,6 @@ export const Text = ({
     },
     caption: {
       fontSize: captionFontSize,
-      textTransform: "uppercase",
       letterSpacing: ".4rem",
     },
     primary: {
