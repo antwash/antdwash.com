@@ -33,7 +33,7 @@ export const Section = (props: SectionProps) => {
       marginRight: theme.spacing.xl,
     },
     divider: {
-      height: theme.spacing.sm,
+      height: ".4rem",
       backgroundColor: theme.palette.primary,
       marginBottom: theme.spacing.xl,
       width: "100%",
