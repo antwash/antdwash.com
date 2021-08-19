@@ -3,7 +3,7 @@ import React from "react"
 import { createUseStyles } from "react-jss"
 
 import { Footer, NavBar, VerticalSocialMediaBar } from "@components"
-import { About, Home, GetInTouch } from "@sections"
+import { About, Home, GetInTouch, Experience } from "@sections"
 
 const useStyles = createUseStyles((theme) => ({
   container: {
@@ -17,6 +17,7 @@ const useStyles = createUseStyles((theme) => ({
     flex: 1,
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
     marginLeft: theme.component.socialBar.width,
   },
 
@@ -39,6 +40,7 @@ export const Layout = () => {
         <div className={classes.content}>
           <Home />
           <About />
+          <Experience />
           <GetInTouch />
           <Footer />
         </div>
