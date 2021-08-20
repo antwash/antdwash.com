@@ -34,6 +34,7 @@ export const GetInTouch = () => {
         variant="p"
         color="grey"
         family="roboto"
+        align="center"
         className={classes.content1}
       >
         Even though I’m not looking for new opportunities, I’m always open to

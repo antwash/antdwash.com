@@ -45,7 +45,7 @@ const jobs: Job[] = [
   {
     id: "tuskegee",
     role: "Computer Science Teacher Assistant",
-    company: "Tuskegee",
+    company: "Tuskegee University",
     location: "Tuskegee",
     timeFrame: "2013 - 2016",
   },
@@ -75,6 +75,9 @@ const JobCard = (props: JobCardProps) => {
     role: {
       marginBottom: theme.spacing.md,
     },
+    company: {
+      marginBottom: theme.spacing.sm,
+    },
   }))()
 
   const {
@@ -85,7 +88,10 @@ const JobCard = (props: JobCardProps) => {
     <div className={classes.container}>
       <div className={classes.content}>
         <Text variant="h4" align="center" className={classes.role}>
-          {`${role} @ ${company}`}
+          {role}
+        </Text>
+        <Text variant="p" align="center" className={classes.company}>
+          {company}
         </Text>
         <Text
           variant="caption"
