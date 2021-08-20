@@ -80,10 +80,11 @@ export const About = () => {
             bottomGutters
             info={
               <>
-                It&apos;s 2008, the infamous AOL dial-up sound is playing and
-                I&apos;m Googling how to hide your MySpace top friends. I
-                didn&apos;t know the copy&paste gibberish to hide my friends was
-                HTML and CSS. All I knew it worked, and it was so cool!
+                It&apos;s 2008, the infamous AOL dial-up sound is playing, and
+                I&apos;m Googling how to hide your MySpace top friends. At the
+                time, I didn&apos;t know the copy & paste gibberish to hide my
+                friends was HTML and CSS. All I knew was that it worked, and it
+                was so cool!
               </>
             }
           />
@@ -91,14 +92,15 @@ export const About = () => {
             bottomGutters
             info={
               <>
-                It&apos;s 2012, I&apos;m a Computer Science freshman @
+                Now it&apos;s 2012 and I&apos;m a Computer Science freshman @
                 <Hyperlink
                   url="https://www.tuskegee.edu/"
                   title=" Tuskegee University"
                 />
-                {", "}the MySpace HTML and CSS gibberish reappeared and
-                it&apos;s actually called programming. I loved diving into the
-                complex programming problems and writing clean instructions.
+                {". "}The MySpace HTML and CSS gibberish reappeared and I came
+                to learn it&apos;s actually called programming. From that day
+                forward, I grew a love for diving into complex programming
+                problems and writing clean instructions.
               </>
             }
           />
@@ -106,8 +108,8 @@ export const About = () => {
             bottomGutters
             info={
               <>
-                Fast forward, I’ve built software features impacting the
-                International Space Station at
+                Fast forward to life after college, I’ve built software features
+                impacting the International Space Station at
                 <Hyperlink url="https://www.boeing.com/" title=" Boeing" />,
                 several Cloud Computing projects at
                 <Hyperlink url="https://www.intel.com" title=" Intel " />
@@ -121,7 +123,7 @@ export const About = () => {
               <>
                 Today, I am the 2nd Senior Software Engineer at
                 <Hyperlink url="https://usehyphen.com/" title=" Hyphen" />
-                {". "}I&apos;m focused on build our apps intuitive user
+                {". "}I&apos;m focused on building our apps intuitive user
                 experience with declarative, reusable and GraphQL connected
                 React components.
               </>
