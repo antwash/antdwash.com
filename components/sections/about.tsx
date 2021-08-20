@@ -80,8 +80,10 @@ export const About = () => {
             bottomGutters
             info={
               <>
-                In 2008, competing with friends to create the best MySpace
-                profile layout was my first exposure to HTML & CSS.
+                It&apos;s 2008, the infamous AOL dial-up sound is playing and
+                I&apos;m Googling how to hide your MySpace top friends. I
+                didn&apos;t know the copy&paste gibberish to hide my friends was
+                HTML and CSS. All I knew it worked, and it was so cool!
               </>
             }
           />
@@ -89,13 +91,14 @@ export const About = () => {
             bottomGutters
             info={
               <>
-                In 2012, while a
+                It&apos;s 2012, I&apos;m a Computer Science freshman @
                 <Hyperlink
                   url="https://www.tuskegee.edu/"
-                  title=" Tuskegee University "
+                  title=" Tuskegee University"
                 />
-                student I discovered writing HTML & CSS is actually called
-                programming. 😲
+                {", "}the MySpace HTML and CSS gibberish reappeared and
+                it&apos;s actually called programming. I loved diving into the
+                complex programming problems and writing clean instructions.
               </>
             }
           />
@@ -103,10 +106,12 @@ export const About = () => {
             bottomGutters
             info={
               <>
-                Fast forward to today, I’ve had the privilege of working at
+                Fast forward, I’ve built software features impacting the
+                International Space Station at
                 <Hyperlink url="https://www.boeing.com/" title=" Boeing" />,
+                several Cloud Computing projects at
                 <Hyperlink url="https://www.intel.com" title=" Intel " />
-                and
+                and a logistical IOT platform at
                 <Hyperlink url="https://www.samsara.com/" title=" Samsara" />.
               </>
             }
@@ -114,10 +119,11 @@ export const About = () => {
           <Info
             info={
               <>
-                Currently, I am the 2nd Senior Software Engineer at
-                <Hyperlink url="https://usehyphen.com/" title=" Hyphen " />
-                building intuitive user interfaces to autopilot food preparation
-                with robots.
+                Today, I am the 2nd Senior Software Engineer at
+                <Hyperlink url="https://usehyphen.com/" title=" Hyphen" />
+                {". "}I&apos;m focused on build our apps intuitive user
+                experience with declarative, reusable and GraphQL connected
+                React components.
               </>
             }
           />
