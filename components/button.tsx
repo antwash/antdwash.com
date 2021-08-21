@@ -5,12 +5,12 @@ import { createUseStyles } from "react-jss"
 import { Text } from "@components"
 
 interface ButtonProps {
-  link: string
   label: string
+  onClick: () => void
 }
 
 export const Button = (props: ButtonProps) => {
-  const { link, label } = props
+  const { label, onClick } = props
   const classes = createUseStyles((theme) => ({
     container: {
       display: "flex",
@@ -20,6 +20,7 @@ export const Button = (props: ButtonProps) => {
       borderRadius: ".5rem",
       padding: "2rem",
       minWidth: "10rem",
+      cursor: "pointer",
       color: theme.palette.primary,
       "&:hover": {
         backgroundColor: theme.palette.secondaryTint,
@@ -28,8 +29,8 @@ export const Button = (props: ButtonProps) => {
   }))()
 
   return (
-    <a href={link} className={classes.container}>
+    <div className={classes.container} onClick={onClick}>
       <Text variant="caption">{label}</Text>
-    </a>
+    </div>
   )
 }
