@@ -49,8 +49,18 @@ export const Home = () => {
         <Hyperlink url="https://usehyphen.com/" title=" @Hyphen" />.
       </Text>
       <div className={classes.actions}>
-        <Button link="mailto:awashington251@gmail.com" label="Email Me" />
-        <Button link="" label="Get Resume" />
+        <Button
+          label="Email Me"
+          onClick={() => {
+            window.open("mailto:awashington251@gmail.com", "_self")
+          }}
+        />
+        <Button
+          label="Get Resume"
+          onClick={() => {
+            window.open("", "_blank")
+          }}
+        />
       </div>
     </Section>
   )

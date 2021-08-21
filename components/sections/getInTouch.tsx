@@ -42,7 +42,12 @@ export const GetInTouch = () => {
         <div className={classes.textSpacing} />
         Send me an email and I’ll do my best to get back to you!
       </Text>
-      <Button label="Say Hi 💌" link="mailto:awashington251@gmail.com" />
+      <Button
+        label="Say Hi 💌"
+        onClick={() => {
+          window.open("mailto:awashington251@gmail.com", "_self")
+        }}
+      />
     </Section>
   )
 }
