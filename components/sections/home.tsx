@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 import { createUseStyles } from "react-jss"
 
@@ -6,7 +6,7 @@ import { CSSTransition } from "react-transition-group"
 
 import { Section } from "@sections"
 import { Hyperlink, Text, Button } from "@components"
-import { useTransitionStyles, delay } from "@transition"
+import { useTransitionStyles, delay, longDelay } from "@transition"
 
 export const Home = () => {
   const classes = createUseStyles((theme) => ({
@@ -24,6 +24,13 @@ export const Home = () => {
       gap: theme.spacing.lg,
     },
   }))()
+
+  const [showContent, setShowContent] = useState(false)
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setShowContent(true), longDelay)
+    return () => clearTimeout(timeout)
+  })
 
   const hello = (
     <Text
@@ -86,22 +93,28 @@ export const Home = () => {
 
   return (
     <Section>
-      {elements.map((element, index) => {
-        return (
-          <CSSTransition
-            in
-            appear
-            key={index}
-            timeout={delay}
-            classNames={{
-              appear: transition.fadeDownAppear,
-              appearActive: transition.fadeDownAppearActive,
-            }}
-          >
-            <div style={{ transitionDelay: `0.${index * 2}s` }}>{element}</div>
-          </CSSTransition>
-        )
-      })}
+      {showContent && (
+        <>
+          {elements.map((element, index) => {
+            return (
+              <CSSTransition
+                appear
+                in
+                key={index}
+                timeout={delay}
+                classNames={{
+                  appear: transition.fadeDownAppear,
+                  appearActive: transition.fadeDownAppearActive,
+                }}
+              >
+                <div style={{ transitionDelay: `0.${index * 2}s` }}>
+                  {element}
+                </div>
+              </CSSTransition>
+            )
+          })}
+        </>
+      )}
     </Section>
   )
 }

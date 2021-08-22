@@ -1,6 +1,7 @@
 import { createUseStyles } from "react-jss"
 
 const delay = 200
+const longDelay = 400
 const useTransitionStyles = createUseStyles(() => ({
   fadeAppear: {
     opacity: 0,
@@ -23,4 +24,4 @@ const useTransitionStyles = createUseStyles(() => ({
   },
 }))
 
-export { useTransitionStyles, delay }
+export { useTransitionStyles, delay, longDelay }
