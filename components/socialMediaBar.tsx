@@ -2,7 +2,11 @@ import React from "react"
 
 import { createUseStyles } from "react-jss"
 
+import { CSSTransition } from "react-transition-group"
+
 import { Icon, IconType } from "@icons"
+
+import { useTransitionStyles, delay } from "@transition"
 
 interface SocialMedia {
   name: IconType
@@ -63,18 +67,30 @@ const SocialMediaList = () => {
     },
   }))()
 
+  const transitions = useTransitionStyles()
+
   return (
-    <div className={classes.iconList}>
-      {socialMedias.map((socialMedia) => {
-        const { name, url } = socialMedia
-        return (
-          <a key={name} aria-label={name} href={url}>
-            <Icon name={name} />
-          </a>
-        )
-      })}
-      <div className={classes.line} />
-    </div>
+    <CSSTransition
+      in
+      appear
+      timeout={delay}
+      classNames={{
+        appear: transitions.fadeAppear,
+        appearActive: transitions.fadeAppearActive,
+      }}
+    >
+      <div className={classes.iconList}>
+        {socialMedias.map((socialMedia) => {
+          const { name, url } = socialMedia
+          return (
+            <a key={name} aria-label={name} href={url}>
+              <Icon name={name} />
+            </a>
+          )
+        })}
+        <div className={classes.line} />
+      </div>
+    </CSSTransition>
   )
 }
 
