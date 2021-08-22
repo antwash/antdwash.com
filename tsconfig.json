@@ -6,7 +6,8 @@
     "paths": {
       "@components": ["components/index.ts"],
       "@icons": ["components/icons/index.ts"],
-      "@sections":["components/sections/index.ts"]
+      "@sections":["components/sections/index.ts"],
+      "@transition": ["styles/transition.ts"]
     },
     "allowJs": true,
     "skipLibCheck": true,
