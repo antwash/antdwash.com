@@ -22,21 +22,6 @@ const theme: Jss.Theme = {
     nav: { height: "10rem" },
     socialBar: { width: "10rem" },
   },
-  animation: {
-    delay: 200,
-    fadeDownAppear: {
-      opacity: 0,
-      transform: "translateY(-20px)",
-      transition:
-        "opacity 0.6s cubic-bezier(0.7, 0, 0.84, 0), transform 0.2s cubic-bezier(0.7, 0, 0.84, 0)",
-    },
-    fadeDownAppearActive: {
-      opacity: 1,
-      transform: "translateY(0)",
-      transition:
-        "opacity 0.6s cubic-bezier(0.7, 0, 0.84, 0), transform 0.2s cubic-bezier(0.7, 0, 0.84, 0)",
-    },
-  },
 }
 
 export default function Home() {

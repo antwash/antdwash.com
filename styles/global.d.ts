@@ -22,19 +22,6 @@ declare global {
           width: string
         }
       }
-      animation: {
-        delay: number
-        fadeDownAppear: {
-          opacity: number
-          transform: string
-          transition: string
-        }
-        fadeDownAppearActive: {
-          opacity: number
-          transform: string
-          transition: string
-        }
-      }
     }
   }
 }
