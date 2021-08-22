@@ -6,6 +6,7 @@ import { CSSTransition } from "react-transition-group"
 
 import { Section } from "@sections"
 import { Hyperlink, Text, Button } from "@components"
+import { useTransitionStyles, delay } from "@transition"
 
 export const Home = () => {
   const classes = createUseStyles((theme) => ({
@@ -21,12 +22,6 @@ export const Home = () => {
       flexWrap: "wrap",
       marginTop: theme.spacing.lg,
       gap: theme.spacing.lg,
-    },
-    appear: {
-      ...theme.animation.fadeDownAppear,
-    },
-    appearActive: {
-      ...theme.animation.fadeDownAppearActive,
     },
   }))()
 
@@ -87,7 +82,7 @@ export const Home = () => {
     actions,
   ]
 
-  const { animation }: Jss.Theme = useTheme()
+  const transition = useTransitionStyles()
 
   return (
     <Section>
@@ -97,10 +92,10 @@ export const Home = () => {
             in
             appear
             key={index}
-            timeout={animation.delay}
+            timeout={delay}
             classNames={{
-              appear: classes.appear,
-              appearActive: classes.appearActive,
+              appear: transition.fadeDownAppear,
+              appearActive: transition.fadeDownAppearActive,
             }}
           >
             <div style={{ transitionDelay: `0.${index * 2}s` }}>{element}</div>
