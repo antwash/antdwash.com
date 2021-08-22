@@ -1,6 +1,6 @@
 import React from "react"
 
-import { createUseStyles, useTheme } from "react-jss"
+import { createUseStyles } from "react-jss"
 
 import { CSSTransition } from "react-transition-group"
 
