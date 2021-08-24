@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import { createUseStyles } from "react-jss"
 
 import { Text } from "@components"
 import { Section } from "@sections"
+import { scrollRevealConfig } from "@utils"
 
 interface Job {
   id: string
@@ -119,8 +120,23 @@ export const Experience = () => {
     },
   }))()
 
+  const ref = React.useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    async function animate() {
+      if (ref.current) {
+        const sr = (await import("scrollreveal")).default
+        sr({
+          ...scrollRevealConfig,
+        }).reveal(ref.current)
+      }
+    }
+    animate()
+  }, [])
+
   return (
     <Section
+      ref={ref}
       showSplitter={{
         caption: "Experience",
         heading: "Where I've made an impact?",
