@@ -7,7 +7,8 @@
       "@components": ["components/index.ts"],
       "@icons": ["components/icons/index.ts"],
       "@sections":["components/sections/index.ts"],
-      "@transition": ["styles/transition.ts"]
+      "@transition": ["styles/transition.ts"],
+      "@utils": ["utils/index.ts"]
     },
     "allowJs": true,
     "skipLibCheck": true,
