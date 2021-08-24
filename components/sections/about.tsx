@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import Image from "next/image"
 
@@ -6,6 +6,7 @@ import { createUseStyles } from "react-jss"
 
 import { Hyperlink, Text } from "@components"
 import { Section } from "@sections"
+import { scrollRevealConfig } from "@utils"
 
 import pictureOfMeCoding from "public/anthony_coding.jpg"
 
@@ -66,8 +67,23 @@ export const About = () => {
     },
   }))()
 
+  const ref = React.useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    async function animate() {
+      if (ref.current) {
+        const sr = (await import("scrollreveal")).default
+        sr({
+          ...scrollRevealConfig,
+        }).reveal(ref.current)
+      }
+    }
+    animate()
+  }, [])
+
   return (
     <Section
+      ref={ref}
       className={classes.section}
       showSplitter={{
         caption: "About",
