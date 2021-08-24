@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import { createUseStyles } from "react-jss"
 
 import { Text, Button } from "@components"
 import { Section } from "@sections"
+import { scrollRevealConfig } from "@utils"
 
 export const GetInTouch = () => {
   const classes = createUseStyles((theme) => ({
@@ -25,8 +26,22 @@ export const GetInTouch = () => {
     },
   }))()
 
+  const ref = React.useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    async function animate() {
+      if (ref.current) {
+        const sr = (await import("scrollreveal")).default
+        sr({
+          ...scrollRevealConfig,
+        }).reveal(ref.current)
+      }
+    }
+    animate()
+  }, [])
+
   return (
-    <Section className={classes.section}>
+    <Section ref={ref} className={classes.section}>
       <Text variant="h2" className={classes.title}>
         Get in Touch!
       </Text>
