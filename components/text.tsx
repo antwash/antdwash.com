@@ -57,12 +57,13 @@ export const Text = ({
       fontSize: `clamp(${pFontSize}, 5vw, ${h4FontSize})`,
     },
     p: {
-      fontSize: `clamp(${captionFontSize}, 3vw, ${pFontSize})`,
+      fontSize: pFontSize,
       lineHeight: "170%",
     },
     caption: {
       fontSize: captionFontSize,
       letterSpacing: ".4rem",
+      textTransform: "uppercase",
     },
     primary: {
       color: theme.palette.primary,

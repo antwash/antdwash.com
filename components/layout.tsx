@@ -23,8 +23,8 @@ const useStyles = createUseStyles((theme) => ({
 
   "@media (max-width: 48rem)": {
     content: {
-      marginLeft: theme.spacing.lg,
-      marginRight: theme.spacing.lg,
+      marginLeft: theme.spacing.sm,
+      marginRight: theme.spacing.sm,
     },
   },
 }))

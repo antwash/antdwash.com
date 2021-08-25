@@ -57,7 +57,7 @@ export const About = () => {
       alignItems: "center",
     },
     image: {
-      borderRadius: theme.spacing.md,
+      borderRadius: theme.spacing.sm,
     },
 
     "@media (max-width: 64rem)": {
