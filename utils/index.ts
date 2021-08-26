@@ -1,9 +1,10 @@
 const scrollRevealConfig: scrollReveal.ScrollRevealObjectOptions = {
   distance: "3rem",
-  duration: 300,
-  delay: 100,
+  duration: 600,
+  delay: 200,
+  opacity: 0,
   viewFactor: 0.25,
-  easing: "cubic-bezier(0.7, 0, 0.84, 0)",
+  easing: "cubic-bezier(0.25, 1, 0.5, 1)",
 }
 
 export { scrollRevealConfig }
