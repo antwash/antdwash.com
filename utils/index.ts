@@ -1,5 +1,4 @@
 const scrollRevealConfig: scrollReveal.ScrollRevealObjectOptions = {
-  origin: "top",
   distance: "3rem",
   duration: 300,
   delay: 100,
