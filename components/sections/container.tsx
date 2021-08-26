@@ -21,7 +21,7 @@ export const Section = React.forwardRef<HTMLDivElement, SectionProps>(
 
     const classes = createUseStyles((theme) => ({
       container: {
-        minHeight: "80vh",
+        minHeight: "100vh",
         padding: `${theme.spacing.xl}`,
       },
       splitter: {
