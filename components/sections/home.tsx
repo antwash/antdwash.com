@@ -58,8 +58,8 @@ export const Home = () => {
   const responsibility = (
     <Text variant="p" color="grey" family="roboto" className={classes.mission}>
       I prioritize designing and building intuitive digital experiences with an
-      emphasizes on UI/UX. Currently, I’m building an IOT, cloud connected
-      robotic makeline to automate food preparation
+      emphasis on UI/UX. Currently, I’m building an IOT, cloud connected robotic
+      makeline to automate food preparation
       <Hyperlink url="https://usehyphen.com/" title=" @Hyphen" />.
     </Text>
   )
