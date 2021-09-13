@@ -10,6 +10,9 @@ import { useTransitionStyles, delay, longDelay } from "@transition"
 
 export const Home = () => {
   const classes = createUseStyles((theme) => ({
+    section: {
+      marginTop: theme.spacing.lg
+    },
     text: {
       marginBottom: theme.spacing.md,
     },
@@ -72,12 +75,6 @@ export const Home = () => {
           window.open("mailto:awashington251@gmail.com", "_self")
         }}
       />
-      <Button
-        label="Get Resume"
-        onClick={() => {
-          window.open("", "_blank")
-        }}
-      />
     </div>
   )
 
@@ -92,7 +89,7 @@ export const Home = () => {
   const transition = useTransitionStyles()
 
   return (
-    <Section>
+    <Section className={classes.section}>
       {showContent && (
         <>
           {elements.map((element, index) => {
