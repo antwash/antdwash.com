@@ -1,6 +1,6 @@
 ## ⭐️ antdwash.com ⭐️
 
-This is the second iteration of [antdwash.com](antdwash.com) built with:
+This is the second iteration of [antdwash.com](https://antdwash.com/) built with:
 - [Nextjs](https://nextjs.org/)
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
