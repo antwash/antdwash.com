@@ -48,7 +48,7 @@ export const Home = () => {
 
   const name = (
     <Text variant="h1" color="primary" className={classes.text}>
-      Anthony Washington.
+      Anthony Washington. You have deployed your site to S3!!
     </Text>
   )
 
