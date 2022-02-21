@@ -14,13 +14,24 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: "Checkout the repo"
       - uses: actions/checkout@v2
+      - name: "Install node, project dependecies and produce static build output"
       - uses: actions/setup-node@v2.5.1
         with:
           node-version: 16
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build
+      - name: "Configure AWS Credentials"
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-east-2
+          access-key-id: ${{ secrets.ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
+      - run: aws s3 sync ./out ${{ secrets.BUCKET_NAME }}
+        
+
 
       
       
