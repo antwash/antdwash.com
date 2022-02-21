@@ -26,7 +26,7 @@ jobs:
           aws-region: us-east-2
           aws-access-key-id: ${{ secrets.ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
-      - run: aws s3 sync /out ${{ secrets.BUCKET_NAME }}
+      - run: aws s3 sync ./out ${{ secrets.BUCKET_NAME }}
         
 
 
