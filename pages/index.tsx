@@ -59,13 +59,13 @@ export default function Home() {
           color="#191923"
         />
         <link
-          rel="preload"
+          rel="prefetch"
           as="font"
           href="/public/fonts/BeVietnam/BeVietnam-Medium.ttf"
           crossOrigin=""
         />
         <link
-          rel="preload"
+          rel="prefetch"
           as="font"
           href="/public/fonts/Roboto/Roboto-Light.ttf"
           crossOrigin=""

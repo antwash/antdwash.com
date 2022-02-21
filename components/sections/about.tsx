@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 
 import Image from "next/image"
+import { ImageLoaderProps } from "next/dist/client/image";
 
 import { createUseStyles } from "react-jss"
 
@@ -68,6 +69,8 @@ export const About = () => {
   }))()
 
   const ref = React.useRef<HTMLDivElement>(null)
+
+  const myLoader = ({ src, width, quality }: ImageLoaderProps) => src
 
   useEffect(() => {
     async function animate() {
@@ -148,11 +151,13 @@ export const About = () => {
         </div>
         <div className={classes.imageContainer}>
           <Image
+            loader={myLoader}
             src={pictureOfMeCoding}
             alt="Picture of Anthony coding"
             className={classes.image}
             width={450}
             height={300}
+            unoptimized
           />
         </div>
       </div>
