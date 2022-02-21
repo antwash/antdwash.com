@@ -24,7 +24,7 @@ jobs:
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: us-east-2
-          access-key-id: ${{ secrets.ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
       - run: aws s3 sync ./out ${{ secrets.BUCKET_NAME }}
         
