@@ -20,11 +20,11 @@ const socialMedias: SocialMedia[] = [
   },
   {
     name: "twitter",
-    url: "https://twitter.com/theprolificdev",
+    url: "https://twitter.com/antdwash",
   },
   {
     name: "instagram",
-    url: "https://www.instagram.com/theprolificdev/",
+    url: "https://www.instagram.com/antdwash/",
   },
   {
     name: "youtube",
