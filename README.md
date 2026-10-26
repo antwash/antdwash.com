@@ -1,36 +1,31 @@
 ## ⭐️ antdwash.com ⭐️
 
-This is the second iteration of [antdwash.com](https://antdwash.com/) built with:
-- [Nextjs](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [React-Jss](https://cssinjs.org/react-jss)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+This repo holds the source for my personal website, [antdwash.com](https://antdwash.com/).
 
+## 🚧 Under Construction 🚧
 
-[You can view my full design process in figma](https://www.figma.com/file/YRxOcvw7ocvoVhu1zcmPy0/antdwash.com?node-id=0%3A1)
-![site-demo](public/site-demo.jpg)
+I can't believe it's been <b>5 years</b> since I last updated it. A lot has changed! 🤓
 
-## ⚠️ Please Read ⚠️
-I had two goals in mind while creating my personal website:
-- give external viewers a quick backstory & overview of my journey
-- contribute to opensource by coding in public
+Right now the site is trimmed down to a single HTML page while I rebuild what the new version will look like. Stay tuned!
 
-You may have a similar goal, as a result, **YES you can use this code for your personal website with attribution**.
+## ☁️ Hosting & Deployment ☁️
 
-I've spent a non-trivial amount of effort designing in Figma and building this website, and I am proud of it! 🤓
+- The site is served as a static website from [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html).
+- Every push to `main` triggers a [GitHub Actions](https://docs.github.com/en/actions) workflow that syncs the `public/` folder to the S3 bucket.
+- The workflow authenticates to AWS with [OIDC](https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services), so no long-lived AWS keys are stored in the repo's secrets.
 
-All I ask is you not claim this effort as your own and give credit by referencing back to [antdwash.com](https://antdwash.com/)
+## 🛠 Local Development 🛠
 
-## 🛠 Install & Setup 🛠
+There's no build step. Serve the `public/` folder with a local web server and open the URL in your browser.
 
-1. Install the correct version of [Node](https://nodejs.org/en/download/)
-2. Install the project dependencies
-   ```
-   yarn install
-   ```
-3. Start the development sever 
-    ```
-    yarn dev
-    ```
+If you have [Node](https://nodejs.org/) installed:
+
+    npx serve public
+
+Then visit http://localhost:3000.
+
+If you have [Python 3](https://www.python.org/) installed:
+
+    python3 -m http.server -d public
+
+Then visit http://localhost:8000.
