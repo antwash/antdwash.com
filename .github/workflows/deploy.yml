@@ -1,34 +1,29 @@
-# This is workflow to build and deploy the static site to S3
-
-name: Deploy 
+name: Deploy
 
 on:
-  # Triggers the workflow on pushes to the main branch
   push:
-    branches: [ main ]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  id-token: write # lets the job request an OIDC token for AWS
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
 
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.5.1
+      - uses: actions/checkout@v7
+
+      - uses: aws-actions/configure-aws-credentials@v6
         with:
-          node-version: 16
-      - run: npm install -g yarn
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
-      - uses: aws-actions/configure-aws-credentials@v1
-        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
           aws-region: ${{ secrets.REGION }}
-          aws-access-key-id: ${{ secrets.ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
-      - run: aws s3 sync ./out ${{ secrets.BUCKET_NAME }}
-        
 
+      - run: aws s3 sync ./public ${{ secrets.BUCKET_NAME }} --delete
 
-      
-      
+      - run: aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
