@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anthony Washington</title>
+    <meta
+      name="description"
+      content="Anthony Washington's personal website. A new version is under construction."
+    />
+    <meta name="theme-color" content="#191923" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+      :root {
+        --background: #191923;
+        --primary: #fbfef9;
+        --secondary: #c81d25;
+        --secondary-text: #ef5b60; /* lighter red so small text meets WCAG AA */
+        --grey: #a0a0a0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        background: var(--background);
+        color: var(--primary);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 40rem;
+        text-align: center;
+      }
+
+      .caption {
+        color: var(--secondary-text);
+        font-size: 0.875rem;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        color: var(--grey);
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+      }
+
+      .email {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        color: var(--primary);
+        text-decoration: none;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        background: var(--secondary);
+      }
+
+      .email:hover,
+      .email:focus-visible {
+        background: color-mix(in srgb, var(--secondary) 50%, transparent);
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1.5rem;
+      }
+
+      ul a {
+        color: var(--grey);
+        text-decoration: none;
+      }
+
+      ul a:hover,
+      ul a:focus-visible {
+        color: var(--primary);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="caption">
+        <span aria-hidden="true">🚧</span> Under construction
+        <span aria-hidden="true">🚧</span>
+      </div>
+      <h1>Anthony Washington</h1>
+      <p>
+        I'm rebuilding my personal website. Stay tuned! In the meantime, feel
+        free to reach out.
+      </p>
+
+      <a class="email" href="mailto:awashington251@gmail.com">Email me</a>
+      <ul>
+        <li><a href="https://github.com/antwash">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/antdwash/">LinkedIn</a></li>
+      </ul>
+    </main>
+  </body>
+</html>
